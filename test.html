@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/brands.js" integrity="sha384-sCI3dTBIJuqT6AwL++zH7qL8ZdKaHpxU43dDt9SyOzimtQ9eyRhkG3B7KMl6AO19" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/all.css">
+    <title>Fatih Camgoz</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .portfolio{
+            background: radial-gradient(rgb(22, 28, 53),rgb(6, 7, 20));
+            overflow: hidden;
+        }
+        nav{
+            display: flex;
+            justify-content: space-around;
+            font-family: 'Bebas Neue', cursive;
+            letter-spacing: 2.5px;
+            min-height: 8vh;
+            margin: auto;
+            padding: 25px 0;
+        }
+        .logo{
+            padding-left: 38px;
+            border-radius: 20px;
+            color: rgb(207, 207, 207);
+            font-size: 20px;
+            transition:0.8s;
+        }
+        .logo:hover{
+            color: rgb(255, 255, 255);
+            text-decoration-line: line-through;
+        }
+        .nav-links{
+            display: flex;
+            justify-content: space-around;
+            width: 35%;
+        }
+        .nav-links li{
+            list-style: none;
+        }
+        .nav-links a{
+            text-decoration: none;
+            color: rgb(207, 207, 207);
+            font-size: 18px;
+            letter-spacing: 2px;
+            transition: 0.5s;
+        }
+        .nav-links a:hover{
+            color: white;
+            font-size: 22px;
+        }
+        .home-section{
+            display: grid;
+            grid-template-columns: 4% 1fr 1.6fr 4%;
+            min-height: 92vh;
+        }
+        .home-picture{
+            grid-column: 2/3;
+            align-self: center;
+            transition: ease-in-out 5s;
+            transform: 2s;
+            transition-delay: 0.2s;
+            width: 30vh;
+            
+        }
+        .home-picture:hover{
+            transform: rotate(100deg);
+            width: 65vh;
+        }
+        .home-picture img:hover{
+            transition-delay: 4ms;
+        }
+        .home-picture img{
+            height: 490px;
+            z-index: 2;
+            box-shadow: 28px 20px 20px rgba(0, 0, 0, 0.3);
+            border-radius: 160px;
+        }
+        .home-body{
+            grid-column: 3/4;
+            align-self: center;
+            color: white;
+            width: 85%;
+            margin: auto;
+        }
+        .home-body h1{
+            padding-bottom: 60px;
+        }
+        .home-body p{
+            padding-bottom: 25px;
+        }
+        .last-edited{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: small;
+            color: rgb(173, 173, 173);
+        }
+        .social-media-h3{
+            text-align: center;
+        }
+        .social-media{
+            grid-column: 3/4;
+            align-self: baseline;
+            display: flex;
+            justify-content: space-around;
+            width: 60%;
+            margin: auto;
+            
+        }
+        .social-media > div{
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .icon{
+            color: rgb(255, 255, 255);
+            font-size: 50px;
+            transition: 0.4s;
+        }
+        .icon:hover{
+            font-size: 60px;
+            color: white;
+        }
+        @media (max-width: 1024px){
+            .home-picture img{
+                width: 30vh;
+                height: 36vh;
+            }
+            .home-picture:hover{
+                width: 40vh;
+                transform: rotate(40deg);
+            }
+            .nav-links a{
+                font-size: 16px;
+            }
+
+        }
+        @media (max-width: 768px){
+            .portfolio{
+                overflow: hidden;
+                height: 100vh;
+            }
+            nav{
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+            .nav-links{
+                display: flex;
+                justify-content: space-between;
+                align-self: auto;
+                width: 50%;
+                padding-bottom: 10px;
+            }
+            .nav-links a{
+                font-size: 16px;
+            }
+            .nav-links a:hover{
+                font-size: 18px;
+            }
+            .home-section{
+                grid-template-rows: 1fr;
+            }
+            .home-picture img{
+                width: 25vh;
+                height: 32vh;
+            }
+            .home-picture:hover{
+                width: 25vh;
+                transform: rotate(20deg);
+            }
+            .home-body{
+                font-size: 14px;
+            }
+            .icon{
+                font-size: 35px;
+                padding-bottom: 100px;
+            }
+        }
+        @media (max-width:580px){
+            .home-section{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="portfolio">
+        <nav>
+            <div class="logo">
+                <h3>Floating astronaut</h3>
+            </div>
+            <ul class="nav-links">
+                <li><a href="">Home</a></li>
+                <li><a href="">Astronaut</a></li>
+                <li><a href="">Spaceship</a></li>
+            </ul>
+        </nav>
+    <main class="home-section"> 
+            <div class="home-picture">
+                <img src="img/astronaut.png" alt="">
+            </div>
+            <div class="home-body">
+                <h1>Who Am I?</h1>
+                <p>Welcome to my site my name is Fatih. I am an international student from Turkey studying in Canada. Currently enrolled in
+                    the Computer Programming Analysis program at George Brown College. I studied Classical Archeology back in Turkey, and
+                    right after I got my bachelor's degree, I came to Canada. History was always in my area of interest.
+                    However, I've never thought about being an archeologist. Idea of becoming a Software developer attracted me more.</p>
+                <p>I am on my 4th semester and I am learning languages such as
+                    Java, C#, Python, JavaScript, PHP, R and SQL. I am also learning essential skills such as Data Structures
+                    and Algorithms, Agile development, Object Oriented Programming, ASP.NET and MVC structure. I am also interested in working
+                    with data and learning about Machine Learning/A.I. By the way don't forget to hover over on the Astronaut Picture :D</p>
+                <p class="last-edited">Last Edited: 01/17/2021</p>
+            </div>
+            <div class="social-media">
+                <div><a href="https://github.com/fcamgz"><i class="fab fa-github-square icon"></i></a></div>
+                <div><a href="https://www.facebook.com/fcamgz/"><i class="fab fa-facebook-square icon"></i></a></div>
+                <div><a href="https://www.instagram.com/fatihcamgz/"><i class="fab fa-instagram-square icon"></i></a></div>
+            </div>
+    </main>
+</div>
+</body>
+</html>
